@@ -1,4 +1,4 @@
-class Constants {
+class TextConstants {
   static const todoTitle = "Todo List Page";
   static const addTaskTitle = "Add Task Page";
   static const hello = "Hello Morcous,";

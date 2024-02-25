@@ -2,19 +2,15 @@
 class Assets {
   Assets._();
 
-  static const String constantsConstants = 'lib/Constants/constants.dart';
-  static const String generatedAssets = 'lib/generated/assets.dart';
-  static const String libMain = 'lib/main.dart';
-  static const String screensAddTaskPage = 'lib/Screens/add_task_page.dart';
-  static const String screensSvgListview = 'lib/Screens/svg_listview.dart';
-  static const String screensTodoPage = 'lib/Screens/todo_page.dart';
-  static const String svgsClipboard = 'lib/Assets/svgs/clipboard.svg';
-  static const String svgsGDSCLogo = 'lib/Assets/svgs/GDSCLogo.png';
-  static const String svgsLogo = 'lib/Assets/svgs/logo.svg';
-  static const String svgsOSOS = 'lib/Assets/svgs/OSOS.jpg';
-  static const String svgsPin = 'lib/Assets/svgs/pin.svg';
-  static const String svgsPlus = 'lib/Assets/svgs/plus.svg';
-  static const String svgsSettings = 'lib/Assets/svgs/settings.svg';
-  static const String svgsTaskPlus = 'lib/Assets/svgs/task_plus.svg';
-  static const String svgsTitle = 'lib/Assets/svgs/title.svg';
+  static const String svgsClipboard = 'Assets/svgs/clipboard.svg';
+  static const String svgsGDSCLogo = 'Assets/svgs/GDSCLogo.png';
+  static const String svgsGDSCVerticalColor =
+      'Assets/svgs/GDSCVerticalColor.png';
+  static const String svgsLogo = 'Assets/svgs/logo.svg';
+  static const String svgsOSOS = 'Assets/svgs/OSOS.jpg';
+  static const String svgsPin = 'Assets/svgs/pin.svg';
+  static const String svgsPlus = 'Assets/svgs/plus.svg';
+  static const String svgsSettings = 'Assets/svgs/settings.svg';
+  static const String svgsTaskPlus = 'Assets/svgs/task_plus.svg';
+  static const String svgsTitle = 'Assets/svgs/title.svg';
 }

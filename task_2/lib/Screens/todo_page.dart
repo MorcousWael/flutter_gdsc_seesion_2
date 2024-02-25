@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task_2/Constants/app_colors.dart';
+import 'package:task_2/generated/assets.dart';
+import 'package:task_2/widgets/app_bar.dart';
 
 import '../Constants/constants.dart';
 
@@ -20,14 +23,7 @@ class _TodoPageState extends State<TodoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Image.asset("lib/Assets/svgs/GDSCLogo.png"),
-        title: const Text(
-          Constants.todoTitle,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-        ),
-        actions: [SvgPicture.asset('lib/Assets/svgs/settings.svg')],
-      ),
+      appBar: const CustomAppBar(text: TextConstants.todoTitle),
       body: Column(
         children: [
           const Row(
@@ -36,35 +32,63 @@ class _TodoPageState extends State<TodoPage> {
                 padding: EdgeInsets.all(8.0),
                 child: CircleAvatar(
                   backgroundImage: AssetImage(
-                    "lib/Assets/svgs/OSOS.jpg",
+                    Assets.svgsOSOS,
                   ),
                   minRadius: 40,
                 ),
               ),
               Center(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      Constants.hello,
+                      TextConstants.hello,
                       style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.start,
                     ),
                     Text(
-                      Constants.hope,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      TextConstants.hope,
+                      style: TextStyle(fontSize: 12),
                     )
                   ],
                 ),
               )
             ],
           ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Container(
+              color: AppColors.elevation,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        TextConstants.hello,
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.start,
+                      ),
+                      ElevatedButton(
+                          onPressed: () {},
+                          child: SvgPicture.asset(Assets.svgsPin))
+                    ],
+                  ),
+                  const Divider(
+                    height: 2,
+                    thickness: 2,
+                  )
+                ],
+              ),
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                Constants.task,
+                TextConstants.task,
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Container(
