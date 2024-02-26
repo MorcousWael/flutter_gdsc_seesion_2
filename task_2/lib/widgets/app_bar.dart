@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_2/Constants/constants.dart';
-import 'package:task_2/generated/assets.dart';
+
+import '../Constants/generated/assets.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String text;

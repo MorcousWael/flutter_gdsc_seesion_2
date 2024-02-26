@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Constants/app_colors.dart';
+
 class InputField extends StatelessWidget {
   final TextEditingController controller;
   final bool obsecureText;
@@ -23,16 +25,32 @@ class InputField extends StatelessWidget {
       controller: controller,
       validator: validator,
       decoration: InputDecoration(
-          errorBorder: _getBorder(color: Colors.red),
-          focusedBorder: _getBorder(),
-          enabledBorder: _getBorder(),
-          hintText: hintText,
-          hintStyle: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-          ),
-          prefixIcon: prefix,
-          suffixIcon: suffix),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        filled: true,
+        fillColor: AppColors.darkElevation,
+        errorBorder: _getBorder(color: Colors.red),
+        focusedBorder: _getBorder(),
+        enabledBorder: _getBorder(),
+        hintText: hintText,
+        hintStyle: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w600,
+        ),
+        prefixIcon: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: prefix,
+        ),
+        prefixIconConstraints: const BoxConstraints(
+          minWidth: 22,
+          minHeight: 22,
+        ),
+        suffixIcon: suffix,
+        suffixIconConstraints: const BoxConstraints(
+          minWidth: 22,
+          minHeight: 22,
+        ),
+      ),
       obscureText: obsecureText,
       keyboardType: keyboardType,
     );
